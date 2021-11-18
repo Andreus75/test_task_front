@@ -12,7 +12,9 @@ export default function ListUsers (props) {
     }
     return (
             <div>
-                <header className='header'></header>
+                <header className='header'>
+
+                </header>
                 <main className='main'>
                     <div className='users'>
                         <button className='create_user' onClick={createUser}>Create User</button>

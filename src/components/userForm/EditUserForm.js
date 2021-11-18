@@ -44,6 +44,7 @@ export default function EditUserForm (props) {
                 <input type="text" name={'email'} placeholder={user.email} readOnly={true}/>
                 <p>Type</p>
                 <input type="text" name={'user_type'} placeholder={user.user_type} readOnly={true}/>
+                <br/>
                 <button className='delete' onClick={() => (state.button = 1)}>Delete</button>
                 <button className='save' onClick={() => (state.button = 2)}>Save</button>
             </form>

@@ -1,3 +1,4 @@
+import "./userForm.css"
 import {useState} from "react";
 import {addUser} from "../../services/userServices";
 export default function CreateUserForm (props) {
@@ -48,27 +49,31 @@ export default function CreateUserForm (props) {
     }
 
     return (
-        <div>
+        <div className="saveNewUser">
             <form onSubmit={saveNewUser}>
                 <h3>Create new user</h3>
-                <p>Username</p>
-                <input type="text" name={'username'} value={username} onInput={inputUserName}/>
-                <p>First name</p>
-                <input type="text" name={'first_name'} value={first_name} onInput={inputFirstName}/>
-                <p>Last name</p>
-                <input type="text" name={'last_name'} value={last_name} onInput={inputLastName}/>
-                <p>Email</p>
-                <input type="text" name={'email'} value={email} onInput={inputEmail}/>
-                <p>Password</p>
-                <input type="text" name={'password'} value={password} onInput={inputPassword}/>
-                <p>Repeat password</p>
-                <input type="text" name={'repeat_password'} value={repeat_password} onInput={inputRepeatPassword}/>
-                <p>Type</p>
-                <input type="text" name={'user_type'} value={user_type} onInput={inputUserType}/>
+                <p>Username <span className="required">*</span><br/>
+                    <input type="text" name={'username'} value={username} onInput={inputUserName} required={true}/></p>
+                <p>First name <span className="required">*</span><br/>
+                    <input type="text" name={'first_name'} value={first_name} onInput={inputFirstName}/></p>
+                <p>Last name <span className="required">*</span><br/>
+                    <input type="text" name={'last_name'} value={last_name} onInput={inputLastName}/></p>
+                <p>Email <span className="required">*</span><br/>
+                    <input type="text" name={'email'} value={email} onInput={inputEmail}/></p>
+                <p>Password <span className="required">*</span><br/>
+                    <input type="text" name={'password'} value={password} onInput={inputPassword}/></p>
+                <p>Repeat password <span className="required">*</span><br/>
+                    <input type="text" name={'repeat_password'} value={repeat_password} onInput={inputRepeatPassword}/>
+                </p>
+                <p>Type <span className="required">*</span><br/>
+                    <select name="select">
+                        <option value={user_type = "Driver"}>Driver</option>
+                        <option value={user_type = "Admin"}>Admin</option>
+                    </select></p>
+                    {/*<input type="text" name={'user_type'} value={user_type} onInput={inputUserType}/>*/}
                 <br/>
                 <button>Create</button>
             </form>
-
         </div>
     );
 }

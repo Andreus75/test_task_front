@@ -22,6 +22,11 @@
 .create_user {
     background: cadetblue;
     width: 30%;
+    text-align: center;
+}
+
+.create_user.input {
+    box-sizing: border-box;
 }
 
 .footer {
@@ -33,4 +38,18 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
+}
+
+input, select {
+    width: 80%;
+    border-radius: 3px;
+}
+
+button {
+    background: gray;
+    border-radius: 4px;
+    margin: 10px;
+}
+.required {
+    color: red;
 }
