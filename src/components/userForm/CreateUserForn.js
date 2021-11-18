@@ -53,24 +53,23 @@ export default function CreateUserForm (props) {
             <form onSubmit={saveNewUser}>
                 <h3>Create new user</h3>
                 <p>Username <span className="required">*</span><br/>
-                    <input type="text" name={'username'} value={username} onInput={inputUserName} required={true}/></p>
+                    <input type="text" name={'username'} value={username} onInput={inputUserName} required={true} maxLength={15}/></p>
                 <p>First name <span className="required">*</span><br/>
-                    <input type="text" name={'first_name'} value={first_name} onInput={inputFirstName}/></p>
+                    <input type="text" name={'first_name'} value={first_name} onInput={inputFirstName} required={true} maxLength={20}/></p>
                 <p>Last name <span className="required">*</span><br/>
-                    <input type="text" name={'last_name'} value={last_name} onInput={inputLastName}/></p>
+                    <input type="text" name={'last_name'} value={last_name} onInput={inputLastName} required={true} maxLength={20}/></p>
                 <p>Email <span className="required">*</span><br/>
-                    <input type="text" name={'email'} value={email} onInput={inputEmail}/></p>
+                    <input type="text" name={'email'} value={email} onInput={inputEmail} required={true}/></p>
                 <p>Password <span className="required">*</span><br/>
-                    <input type="text" name={'password'} value={password} onInput={inputPassword}/></p>
+                    <input type="text" name={'password'} value={password} onInput={inputPassword} required={true}/></p>
                 <p>Repeat password <span className="required">*</span><br/>
-                    <input type="text" name={'repeat_password'} value={repeat_password} onInput={inputRepeatPassword}/>
+                    <input type="text" name={'repeat_password'} value={repeat_password} onInput={inputRepeatPassword} required={true}/>
                 </p>
                 <p>Type <span className="required">*</span><br/>
-                    <select name="select">
+                    <select name="select" onInput={inputUserType} required={true}>
                         <option value={user_type = "Driver"}>Driver</option>
                         <option value={user_type = "Admin"}>Admin</option>
                     </select></p>
-                    {/*<input type="text" name={'user_type'} value={user_type} onInput={inputUserType}/>*/}
                 <br/>
                 <button>Create</button>
             </form>

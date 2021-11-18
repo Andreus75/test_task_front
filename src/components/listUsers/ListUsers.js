@@ -13,7 +13,12 @@ export default function ListUsers (props) {
     return (
             <div>
                 <header className='header'>
+                    <div className="error_message">
 
+                    </div>
+                    <div className="successful">
+
+                    </div>
                 </header>
                 <main className='main'>
                     <div className='users'>
