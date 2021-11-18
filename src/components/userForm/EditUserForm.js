@@ -2,7 +2,6 @@ import {useState} from "react";
 import {deleteUser, updateUser} from "../../services/userServices";
 
 export default function EditUserForm (props) {
-    console.log(props.location.state.user);
     let {location: {state: {user}}, history} = props;
 
     let [first_name, setFirstName] = useState('');
@@ -17,8 +16,7 @@ export default function EditUserForm (props) {
     }
 
     const state = {button: 1};
-    console.log(user._id);
-    console.log(state);
+
     const editUser = (e) => {
         e.preventDefault();
         if (state.button === 1) {
@@ -29,7 +27,6 @@ export default function EditUserForm (props) {
             history.push(`/users/${user._id}`);
             let updateInfo = {first_name, last_name};
             updateUser(updateInfo, user._id);
-            console.log('buttonSave');
         }
 
 
