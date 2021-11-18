@@ -9,12 +9,10 @@ import {
 export default function User ({user}) {
     const {username, first_name, last_name, email, user_type} = user;
     return (
-        <Router>
             <div className="user">
-                <Link to={'/user/edit'}>
+                <Link to={{pathname:'/users/edit', state: {user}}}>
                     {username} {first_name} {last_name} {email} {user_type}
                 </Link>
             </div>
-        </Router>
     );
 }

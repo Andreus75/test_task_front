@@ -23,10 +23,8 @@ export default function ListUsers (props) {
                     </div>
                     <div className='create_user'>
                         <Switch>
-                            <Route path={'/user/edit'} render={(props) => {
-                                return <EditUserForm {...props}/>;
-                            }}/>
-                            <Route path={'/users/create'}  component={CreateUserForm}/>
+                            <Route path={'/users/edit'} component={EditUserForm}/>
+                            <Route path={'/users/create'} component={CreateUserForm}/>
                         </Switch>
                     </div>
                 </main>
