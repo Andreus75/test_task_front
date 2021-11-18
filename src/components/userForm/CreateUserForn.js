@@ -35,14 +35,15 @@ export default function CreateUserForm (props) {
 
     function saveNewUser(e) {
         e.preventDefault();
-        console.log('saveNewUser');
+
         if (password === repeat_password) {
             let user = {username, first_name, last_name, email, password, user_type};
-            console.log(user);
+
             addUser(user);
+
             history.push('/users');
         } else {
-            console.log('errr');
+            console.log('Repeat password is wrong!!!');
         }
     }
 
