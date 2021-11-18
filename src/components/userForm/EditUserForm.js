@@ -25,11 +25,9 @@ export default function EditUserForm (props) {
         }
         if (state.button === 2) {
             history.push(`/users/${user._id}`);
-            let updateInfo = {first_name, last_name};
+            let updateInfo = {first_name: first_name || user.first_name, last_name: last_name || user.last_name};
             updateUser(updateInfo, user._id);
         }
-
-
     }
 
 
